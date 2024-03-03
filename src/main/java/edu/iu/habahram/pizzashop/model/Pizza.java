@@ -6,9 +6,11 @@ public abstract class Pizza {
     Dough dough;
     Sauce sauce;
     Veggies[] veggies;
-    Cheese cheese;
+    Cheese[] cheese;
     Pepperoni pepperoni;
     Clams clam;
+
+    Powder powder;
 
     StringBuffer state = new StringBuffer();
 
@@ -49,7 +51,12 @@ public abstract class Pizza {
             result.append("\n");
         }
         if (cheese != null) {
-            result.append(cheese);
+            for (int i = 0; i < cheese.length; i++) {
+                result.append(cheese[i]);
+                if (i < cheese.length-1) {
+                    result.append(", ");
+                }
+            }
             result.append("\n");
         }
         if (veggies != null) {
@@ -65,6 +72,11 @@ public abstract class Pizza {
             result.append(clam);
             result.append("\n");
         }
+        if (powder != null) {
+            result.append(powder);
+            result.append("\n");
+        }
+
         if (pepperoni != null) {
             result.append(pepperoni);
             result.append("\n");

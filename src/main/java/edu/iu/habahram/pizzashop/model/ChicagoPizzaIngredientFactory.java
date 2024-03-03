@@ -12,8 +12,16 @@ public class ChicagoPizzaIngredientFactory
 		return new PlumTomatoSauce();
 	}
 
-	public Cheese createCheese() {
-		return new MozzarellaCheese();
+	public Powder createPower(){
+		return new oregano();
+	}
+
+	public Cheese[] createCheese() {
+		Cheese cheese[] = {
+				new MozzarellaCheese(),
+				new Parmersan(),
+		};
+		return cheese;
 	}
 
 	public Veggies[] createVeggies() {
